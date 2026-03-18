@@ -64,6 +64,4 @@ Claude Code stores configuration at `~/.claude/settings.json`:
 
 ## Implementation Notes
 
-Proxy is configured in `~/.zshrc` to use `127.0.0.1:7897` for HTTP/HTTPS traffic.
-
 This project was built with reference to cc-switch's architecture but simplified to a pure Python Flask implementation suitable for WSL2's headless environment.
