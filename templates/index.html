@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 模型切换</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Claude Code 模型切换</h1>
+            <p class="subtitle">支持多供应商切换</p>
+        </header>
+
+        <main>
+            <section class="current-status" id="current-section">
+                <h2>当前配置</h2>
+                <div class="current-display">
+                    <div class="provider-badge" id="current-provider">-</div>
+                    <div class="model-badge" id="current-model">-</div>
+                </div>
+            </section>
+
+            <section class="provider-list">
+                <h2>选择供应商</h2>
+                <div class="providers" id="providers-container">
+                    <span class="loading">加载中...</span>
+                </div>
+            </section>
+
+            <section class="model-list" id="model-section" style="display: none;">
+                <h2>选择模型</h2>
+                <div class="models" id="models-container">
+                    <span class="loading">选择供应商后加载...</span>
+                </div>
+            </section>
+
+            <section class="status" id="status-section">
+                <div class="status-message" id="status-message"></div>
+            </section>
+
+            <section class="config-info">
+                <h2>配置信息</h2>
+                <p class="config-path" id="config-path">-</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>基于 cc-switch 架构设计</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
